@@ -63,8 +63,7 @@ class PlantByID(Resource):
         db.session.delete(plant)
         db.session.commit()
 
-        response ={"message":f"{plant.name} deleted succesfully"}
-        return make_response(response,200)
+        return make_response(" ",204)
 
 api.add_resource(PlantByID, '/plants/<int:id>')
 
